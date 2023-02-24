@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Čas a dátum</title>
+        <link rel="stylesheet" href="Styles/projekty.css">
+        <link rel="shortcut icon" href="Img/meteor2.png">
+    </head>
+
+    <body>
+
+    <style>
+
+        body {
+            background-color: rgba(63, 63, 63, 0.267);
+        }
+        
+        .corner {
+            text-align: center;
+            margin-top: 20%;
+            color: rgb(0, 0, 0);
+            font-size: 40px;
+        }
+
+    </style>
+
+        <h1 style="text-align: center;">ČAS A DÁTUM</h1>
+
+        <div id="clock" class="corner">
+        </div>
+
+        <script type="text/javascript">
+            function showTime() {
+                var d = new Date();
+                var year = d.getFullYear();
+                var month = d.getMonth();
+                var date = d.getDate();
+                var day = d.getDay();
+                var hour = d.getHours();
+                var min = d.getMinutes();
+                var sec = d.getSeconds();
+
+        switch(month){
+            case 0:
+            month="Január";
+            break;
+
+            case 2:
+            month="Február";
+            break;
+
+            case 3:
+            month="Marec";
+            break;
+
+            case 4:
+            month="Apríl";
+            break;
+
+            case 5:
+            month="Máj"
+            break;
+
+            case 6:
+            month="Jún"
+            break;
+
+            case 7:
+            month="Júl"
+            break;
+
+            case 8:
+            month="August"
+            break;
+
+            case 9:
+            month="September"
+            break;
+
+            case 10:
+            month="Október"
+            break;
+
+            case 11:
+            month="November"
+            break;
+
+            case 12:
+            month="December"
+            break;
+
+            default:
+        }
+
+        var MV = "AM";
+        if (hour == 12) {
+            MV = "PM";
+        }
+
+        if (hour > 12) {
+            hour = hour % 12;
+            MV = "PM";
+        }
+
+        hour = ("0" + hour).slice(-2);
+        min = ("0" + min).slice(-2);
+        sec = ("0" + sec).slice(-2); 
+
+        document.getElementById("clock").innerHTML = "<b>Dnes je:</b> " + date + ". " + month + " " + year + ", " + hour + ":" + min + ":" + sec + " " + MV;
+
+            }
+            setInterval(showTime, 1000);
+        </script>
+    </body>
+</html>

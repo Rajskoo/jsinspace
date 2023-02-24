@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Space</title>
+
+    <!-- STYLES -->
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-navbar.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-header.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-article.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-footer.css">
+    <link type="text/css" rel="stylesheet" href="Styles/main.css">
+    <link rel="shortcut icon" href="Img/meteor2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+<body>
+
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+ <!-- NAVBAR -->
+ <nav>
+
+    <div class="logo"><a href="index.html" style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></a></div>
+
+    <label for="btn" class="icon">
+      <span class="open-close"><i class="fas fa-th" style="color: rgb(255, 255, 255);"></i></span>
+    </label>
+    <input type="checkbox" id="btn">
+    <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li>
+            <label for="btn-1" class="show">Dokumenty <span class="up-down"><i class="fas fa-caret-down" style="color: rgb(255, 255, 255);"></i></span></label>
+            <a href="#">Dokumenty</a>
+            <input type="checkbox" id="btn-1">
+            <ul>
+                <li><a href="uvodDoJS.html">Úvod do JavaScriptu</a></li>
+                <li><a href="premenneHodnoty.html">Premenné</a></li>
+                <li><a href="matMetody.html">Matematické metódy</a></li>
+                <li><a href="retazce.html">Reťazce</a></li>
+                <li><a href="ifElse.html"><span style="color: #ff225e;">• </span>Riadiace príkazy - if/else</a></li>
+                <li><a href="cykly.html">Riadiace príkazy - cykly</a></li>
+                <li><a href="arrays.html">Polia</a></li>
+                <li><a href="funkcie.html">Vlastné funkcie</a></li>
+            </ul>
+        </li>
+        <li><a href="index.html#documents">Moje Dokumenty</a></li>
+        <li><a href="zdrojoveKody.html">Zdrojové kódy</a></li>
+    </ul>
+ <!-- END OF NAVBAR -->
+ </nav>
+
+ <div class="wrapper">
+  <div class="text-content">
+    <h1>JavaScript in Space</h1>
+  </div>
+</div>
+
+<div class="wave">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<!-- HEADER - TEÓRIA -->
+ <header>
+ <div class="container">
+  <span class="main-text"><h2>RIADIACE PRÍKAZY - IF/ELSE</h2></span>
+    <div class="text">
+      <h2 class="nadpis">Čo sa v tejto kapitole naučíme?</h2>
+        <p class="list">→ Vytvárať relačné a logické výrazy,</p>
+        <p class="list">→ Používať príkaz if/else.</p>
+        <br />
+      <h2 class="nadpis">Relačné operátory a výrazy</h2>
+        <p class="textp">
+          Relačné (alebo tiež porovnávacie) operátory sa využívajú pri vytváraní rozhodovacích podmienok v podmienených príkazoch a v cykloch.
+          Jazyk JavaScript poskytuje nasledovné relačné operátory:
+
+          <br />
+          <br />
+            <p class="list2">→ <strong style="color: #1e92ff;">></strong> je väčší než,</p>
+            <p class="list2">→ <strong style="color: #1e92ff;">=</strong> je väčší rovný než,</p>
+            <p class="list2">→ <strong style="color: #1e92ff;"><</strong> je menší než,</p>
+            <p class="list2">→ <strong style="color: #1e92ff;"><=</strong> je menší rovný než,</p>
+            <p class="list2">→ <strong style="color: #1e92ff;">==</strong> je rovný,</p>
+            <p class="list2">→ <strong style="color: #1e92ff;">!=</strong> nie je rovný.</p>
+          
+            <br />
+            <br />
+          <p class="textp">
+            Pomocou hore uvedených operátorov vytvárame relačné (porovnávacie) výrazy. Vyhodnotením relačného výrazu sa získa logická pravda - true alebo logická nepravda false.
+            Operandami relačných výrazov sú aritmetické výrazy, pričom aritmetické výrazy majú vyššiu prioritu.
+
+          </br>
+
+            <div class="code-border">
+              <p class="code-text">
+                <div class="text-border1" style="color: white;">
+                  a + 3 > b - 10 <span class="comment">//je rovnaké ako (a + 3) > (b - 10)</span> <br />
+                  cislo1 >== cislo2 </span> <span class="comment">//pozor na zápis cislo1 = cislo2</span><br />
+                  x >= y + Math.sqrt(z >+ y);<br />
+                  znak <= `Z`
+                </div>
+              </p>
+            </div>
+            <br />
+
+        <h2 class="nadpis">Logické operátory a výrazy</h2>
+          <p class="textp">
+            Logické operátory (rovnako ako relačné operátory) sa využívajú pri vytváraní rozhodovacích podmienok v podmienených príkazoch a v cykloch.
+            Umožňujú vytvárať zložitejšie rozhodovacie podmienky. Jazyk JavaScript poskytuje nasledovné logické operátory:
+
+            <br />
+            <br />
+              <p class="list2">→ <strong style="color: #1e92ff;">&&</strong> logický súčin,</p>
+              <p class="list2">→ <strong style="color: #1e92ff;">||</strong> logický súčet.</p>
+
+          </p>
+
+          <p class="textp">
+            <br />
+            
+            Vyhodnotením logického výrazu sa získa logická pravda - true alebo logická nepravda false.
+            Operandami logických výrazov sú relačné výrazy, pričom relačné výrazy majú vyššiu prioritu. Výnimku tvorí operátor !,
+            ktorý má vyššiu prioritu než všetky relačné a aritmetické operátory.
+
+            <br />
+            <br />
+            <strong style="color: #1e92ff;">Operátory &&</strong><br />
+            Logický výraz s operátorom && vráti hodnotu true iba vtedy, ak sú oba relačné výrazy pravdivé.
+            Inak vráti hodnotu false. Predpokladajme, že v príkladoch logických výrazov majú premenné priradené nasledovné hodnoty: a=10; b=15; c=25. Potom:
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                b >= a && b <= C <span class="comment">//true, lebo oba relačné výrazy sú pravdivé</span> <br />
+                a >= c && b <= c <span class="comment">//false, lebo jeden z relačných výrazov je nepravdivý</span> <br />
+                !(a >= c) &&< b <= c <span class="comment">//true</span> <br />
+              </div>
+            </p>
+          </div>
+          <br />
+
+          <p class="textp">
+            V prípade použitia operátora && sa logický súčin vyhodnocuje skrátene,
+            t.j. ak prvý z operandov má hodnotu false, tak už je celý výraz vyhodnotený ako false (druhý z operandov sa nevyhodnocuje).
+
+            <br />
+            <br />
+            <strong style="color: #1e92ff;">Operátory ||</strong><br />
+            Logický výraz s operátorom ||vráti hodnotu true, ak aspoň jeden z relačných výrazov je pravdivý.
+            Predpokladajme, že v príkladoch logických výrazov majú premenné priradené nasledovné hodnoty: a=10; b=15; c=25. Potom:
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                a > b || c > b  <span class="comment">//true, lebo c > b</span> <br />
+                a + b >= c ||  b == c > b <span class="comment">//true, lebo a + b >= c</span> <br />
+                b < a || c < a  <span class="comment">//false, lebo oba relačné výrazy sú nepravdivé</span> <br />
+                c >= b - a ||  b > a <span class="comment">//true, lebo oba relačné výrazy sú pravdivé</span> <br />
+                </span>
+              </div>
+            </p>
+          </div>
+          <br />
+
+          <p class="textp">
+            V prípade použitia operátora || sa logický súčin vyhodnocuje skrátene,
+            t.j. ak prvý z operandov má hodnotu true, tak už je celý výraz vyhodnotený ako true (druhý z operandov sa nevyhodnocuje).
+
+            <br />
+            <br />
+            <strong style="color: #1e92ff;">Operátor !</strong><br />
+            Logický operátor ! neguje pravdivostnú hodnotu výrazu. Príklady:
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                !(a ==  b) <span class="comment">//true, lebo a == b je false</span><br />
+                !(a <  c) <span class="comment">//false, lebo a < c je true</span>
+              </div>
+            </p>
+          </div>
+
+          <br />
+          <br />
+          <h2 class="nadpis">Podmienený príkaz if</h2>
+          <p class="textp">
+            Doteraz sme vytvárali scripty, v ktorých sa vykonávali všetky príkazy jeden za druhým – hovoríme o tzv. sekvencii.
+            Jednou z kľúčových vlastností dobre navrhnutých scriptov je ich schopnosť prevádzať rozhodovania. Vtedy môže program prebehnúť aj bez vykonania niektorých príkazov.
+            <br />
+            V jazyku JavaScript sa na rozhodovanie používa podmienený príkaz if.
+            Podmienený príkaz if patrí medzi tzv. štruktúrované alebo tiež zložené príkazy.
+            Každý štruktúrovaný príkaz obsahuje v sebe jeden alebo viac ďalších príkazov, pričom ním môže byť ľubovoľný jednoduchý alebo tiež štruktúrovaný príkaz.
+            Pomocou príkazu if je možné vetviť program na základe splnenia alebo nesplnenia podmienky.
+
+            <br />
+            <strong style="color: #1e92ff;">Všeobecný tvar príkazu if:</strong><br />
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                if (podmienka) {<br />
+                  &emsp;<span class="comment">//TODO kód pôjde sem</span><br />
+                }
+              </div>
+            </p>
+          </div>
+
+          <p class="textp">
+            <p class="list2">→ if - rezervované slovo,</p>
+            <p class="list2">→ podmienka - relačný alebo logický výraz, napríklad: sucet == 100..,</p>
+            <br />
+          </p>
+
+          <p class="textp">
+            Ak je splnená podmienka (t.j. výraz je pravdivý), tak sa vykonajú príkazy uvedené za podmienkou a program pokračuje ďalej.
+            Ak nie je splnená podmienka (t.j. výraz nie je pravdivý), tak sa príkazy za podmienkou nevykonajú a program pokračuje ďalej.
+          </p>
+
+          <h2 class="nadpis">Podmienený príkaz if - else</h2>
+          <p class="textp">
+            Podmienený príkaz if predpisuje iba to, čo sa má vykonať, keď je podmienka splnená. Nepredpisuje čo sa má vykonať, keď podmienka splnená nie je.
+            Aby bolo možne určiť čo sa má vykonať, keď podmienka splnená nie je, je potrebné podmienený príkaz doplniť o rezervované slovo else.
+            <br />
+            <strong style="color: #1e92ff;">Všeobecný tvar príkazu if - else:</strong><br />
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                if (podmienka) {<br />
+                  &emsp;<span class="comment">//TODO kód pôjde sem</span><br />
+                } else {<br />
+                  &emsp;<span class="comment">//TODO kód pôjde sem</span><br />
+                }
+              </div>
+            </p>
+          </div>
+
+          <h2 class="nadpis">Podmienený výraz - operátor ?</h2>
+          <p class="textp">
+            JavaSCript umožňuje vytváranie aj tzv. podmienených výrazov. Využíva na to ternárny operátor
+            ?. Výhodou použitia operátora ? je to, že takýto výraz možno použiť na pravej strane priraďovacieho príkazu. 
+            Operátor ? sa však takmer vždy dá nahradiť konštrukciou if – else.
+
+            <br />
+            <strong style="color: #1e92ff;">Všeobecný tvar podmieneného výrazu:</strong><br />
+              &emsp;<strong style="color: #0a60b1;">podmienka ? vyraz1 : vyraz2</strong>
+              <br />
+              <br />
+              Ak je splnená podmienka , tak podmienený výraz vráti výraz1, inak vráti výraz2. Príklad:
+          </p>
+
+          <div class="code-border">
+            <p class="code-text">
+              <div class="text-border1" style="color: white;">
+                var vacsieCislo = a > b ? a : b;
+              </div>
+            </p>
+          </div>
+
+        <br />
+    </div>
+ </div>
+<!-- END OF HEADER -->
+ </header>
+
+  <!-- ARTICLE - ÚLOHY  -->
+   <article>
+   <div class="container">
+    <div class="main-text"><h2>ÚLOHY NA PRECVIČOVANIE</h2></div>
+      <div class="text">
+        
+        <div class="section">
+
+          <!-- ÚLOHA č. 1 -->
+          <details>
+            <summary>Úloha č. 1 </summary>
+            <div class="faq__content">
+              <p>Vytvoríme projekt <strong style="color: #1e92ff;">kladne-cislo</strong>, script zistí a vypíše, či číslo, uložené v premennej je kladné, rovné nule, alebo záporné.</p><br />
+              <a style="color: #1e92ff; cursor: pointer; text-decoration: none;" href="zdrojoveKody.html#ph-u1"> Zobraziť zdrojový kód</a>
+              <br />
+            </div>
+            <br />
+          </details>
+
+          <!-- ÚLOHA č. 2 -->
+          <details>
+            <summary>Úloha č. 2 </summary>
+            <div class="faq__content">
+              <p>Vytvoríme projekt <strong style="color: #1e92ff;">parne-cislo</strong>, script zistí a vypíše, či číslo, uložené v premennej je párne, alebo nepárne.</p><br />
+              <a style="color: #1e92ff; cursor: pointer; text-decoration: none;" href="zdrojoveKody.html#ph-u2"> Zobraziť zdrojový kód</a>
+              <br />
+            </div>
+          </details>
+
+        </div>
+
+    </div>
+   </div>
+  <!-- END OF ARTICLE -->
+  </article>
+
+  <div class="scrollTop" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="main-text"><h2 style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></h2></div>
+      <div class="text"><p>&copy; 2022 <span class="author"><a href="https://www.facebook.com/tomas.reismuller">Tomáš Reisműller</a></span></p></div>
+    </div>
+  <!-- END OF FOOTER-->
+  </footer>
+
+  <script type="text/javascript">
+    setTimeout(function() {
+      $('.loader').fadeToggle();
+    }, 1000);
+
+     $('.icon').click(function(){
+       $('span.open-close i').toggleClass("fa-times");
+     });
+
+     $('.show').click(function(){
+       $('span.up-down i').toggleClass("fa-caret-up");
+     });
+
+     window.addEventListener('scroll', function() {
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle("active", window.scrollY > 500);
+     });
+
+     function scrollToTop() {
+       window.scrollTo(0, 0);
+     }
+  </script>
+
+</body>
+</html>

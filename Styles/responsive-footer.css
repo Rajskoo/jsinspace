@@ -1,0 +1,60 @@
+footer {
+  max-width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+footer .container {
+  border: 1px solid #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: rgba(87, 87, 87, 0.2);
+
+  margin-top: 65px;
+  min-height: 100px;
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+footer .container-zdrojove-kody {
+  border: 1px solid #000;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  background: rgba(87, 87, 87, 0.2);
+
+  margin-top: -35px;
+  min-height: 100px;
+
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+footer .main-text {
+  text-align: center;
+  padding-top: 10px;
+}
+
+footer .text p {
+  text-align: center;
+  padding-top: 15px;
+  color: rgb(255, 255, 255);
+}
+
+footer .text span.author a {
+  color: #ff2a00;
+  text-decoration: none;
+  cursor: url(../Images/pointer.png), pointer;
+}
+
+@media all and (max-width: 992px) {
+
+  footer {
+    margin-left: 0%;
+  }
+}
+
+@media all and (max-width: 688px) {
+
+  footer {
+    margin-left: 0%;
+  }
+}

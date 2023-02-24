@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Space</title>
+
+    <!-- STYLES -->
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-navbar.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-header.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-article.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-footer.css">
+    <link type="text/css" rel="stylesheet" href="Styles/main.css">
+    <link rel="shortcut icon" href="Img/meteor2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+
+<body>
+
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+ <!-- NAVBAR -->
+ <nav id="nav-style">
+
+    <div class="logo"><a href="index.html" style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></a></div>
+
+    <label for="btn" class="icon">
+      <span class="open-close"><i class="fas fa-th" style="color: rgb(255, 255, 255);"></i></span>
+    </label>
+    <input type="checkbox" id="btn">
+    <ul>
+        <li><a href="index.html"><span style="color: #ff225e;">• </span>Domov</a></li>
+        <li>
+            <label for="btn-1" class="show">Dokumenty <span class="up-down"><i class="fas fa-caret-down" style="color: rgb(255, 255, 255);"></i></span></label>
+            <a href="#">Dokumenty</a>
+            <input type="checkbox" id="btn-1">
+            <ul>
+                <li><a href="uvodDoJS.html">Úvod do JavaScriptu</a></li>
+                <li><a href="premenneHodnoty.html">Premenné</a></li>
+                <li><a href="matMetody.html">Matematické metódy</a></li>
+                <li><a href="retazce.html">Reťazce</a></li>
+                <li><a href="ifElse.html">Riadiace príkazy - if/else</a></li>
+                <li><a href="cykly.html">Riadiace príkazy - cykly</a></li>
+                <li><a href="arrays.html">Polia</a></li>
+                <li><a href="funkcie.html">Vlastné funkcie</a></li>
+            </ul>
+        </li>
+        <li><a href="#documents">Moje Projekty</a></li>
+        <li><a href="zdrojoveKody.html">Zdrojové kódy</a></li>
+    </ul>
+ <!-- END OF NAVBAR -->
+ </nav>
+
+<div class="wrapper">
+  <div class="text-content">
+    <h1>JavaScript in Space</h1>
+  </div>
+</div>
+
+<div class="wave">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<!-- HEADER - TEÓRIA -->
+ <header>
+ <div class="container-index" id="container-index-style">
+  <div class="main-text"><h2>VITAJTE NA STRÁNKE <span class="main-nadpis" style="color: #ff225e;">JAVASCRIPT IN SPACE</span></h2></div>
+  <div class="sub-container">
+    <div class="text">
+      
+      <br />
+        <h2 class="nadpis">O čom je táto stránka?</h3>
+          <p class="textp">
+            Táto stránka slúži ako rozšírené poznámky do programovacieho jazyku JavaScript.<br />
+            <br />
+            Na tejto stránke nájdete:
+          </p>
+          <p class="list">→ Ako sa naučiť JavaScript,</p>
+          <p class="list">→ Vysvetlené základy JavaScriptu,</p>
+          <p class="list">→ Stručné poznámky z jednotlivých tém,</p>
+          <p class="list">→ Jednoduché úlohy z každej kategórie,</p>
+          <p class="list">→ Zdrojové kódy ku každej úlohe,</p>
+          <p class="list">→ Live demo verziu kódov,</p>
+          <p class="list">→ Moje projekty, na ktorých som pracoval.</p>
+
+        <h2 class="nadpis">Niečo málo o mne</h2>
+        <p class="textp">
+          Moje meno je Tomáš a som študent strednej priemyselnej školy elektrotechnickej Hálova 16. Tento projekt som si vybral ako praktickú maturitnú prácu z tvorby webových stránok.
+          Rád sa učím nové veci, učím sa programovať v programovacích jazykoch JavaScript a Java. V mojom voľnom čase rád športujem, alebo trávim čas s kamarátmi. 
+        </p>
+        <br><br>
+        <p class="count-text">Táto stránka má <span class="count-span" id="count">0</span> zobrazení!</p>
+    </div>
+  </div>
+
+ </div>
+<!-- END OF HEADER -->
+ </header>
+
+  <!-- ARTICLE - ÚLOHY  -->
+   <article>
+   <div class="container-documents" id="documents">
+    <div class="main-text"><h2>MOJE PROJEKTY</h2></div>
+    <div class="sub-container">
+      <div class="text">
+        
+        <div class="container-content">
+          <div class="box">
+            <h2>1</h2>
+            <h3>Čas a Dátum</h3>
+            <p>Jednoduchý script na zobrazenie aktuálneho času a dátumu.
+              <br><br><br><br>
+              <strong><a href="dayDate.html">LINK</a></strong>
+            </p>
+          </div>
+
+          <div class="box">
+            <h2>2</h2>
+            <h3>Geometrické tvary</h3>
+            <p>4 rôzne geometrické tvary, každý z nich ponúka 2 výpočty (obsah a objem).
+              <br><br><br><br>
+              <strong><a href="geometricke-tvary.html">LINK</a></strong>
+            </p>
+          </div>
+
+          <div class="box">
+            <h2>3</h2>
+            <h3>Šifrovanie textu</h3>
+            <p>Nemáš nápady na svoje heslo? Tu sa môžeš inšpirovať! Stačí, ak zadáš nejaké slovo a script ti ho zašifruje.
+              <br><br><br>
+              <strong><a href="sifrovanieTextu.html">LINK</a></strong>
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+   </div>
+  <!-- END OF ARTICLE -->
+  </article>
+
+  <div class="scrollTop" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container" id="footer-style">
+      <div class="main-text"><h2 style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></h2></div>
+      <div class="text"><p>&copy; 2022 <span class="author"><a href="https://www.facebook.com/tomas.reismuller">Tomáš Reisműller</a></span></p></div>
+    </div>
+  <!-- END OF FOOTER-->
+  </footer>
+
+  <script type="text/javascript">
+
+    setTimeout(function() {
+      $('.loader').fadeToggle();
+    }, 1000);
+
+     $('.icon').click(function(){
+       $('span.open-close i').toggleClass("fa-times");
+     });
+
+     $('.show').click(function(){
+       $('span.up-down i').toggleClass("fa-caret-up");
+     });
+
+     window.addEventListener('scroll', function() {
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle("active", window.scrollY > 500);
+     });
+
+     function scrollToTop() {
+       window.scrollTo(0, 0);
+     }
+
+     const countEl = document.getElementById('count');
+     countVisit();
+     function countVisit() {
+       fetch('https://api.countapi.xyz/update/jsinspace/website/?amount=1').then(res => res.json()).then(res => {
+          countEl.innerHTML = res.value;
+       });
+     }
+
+     //RESET COUNT API: https://api.countapi.xyz/update/jsinspace/website/?amount=-1 - Stačí vložiť do browseru a refreshovať stránku dokým sa "value" nezmení na 0.
+  </script>
+
+</body>
+</html>

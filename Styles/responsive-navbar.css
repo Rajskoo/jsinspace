@@ -1,0 +1,164 @@
+nav {
+  border: 1px solid #000;
+  background: rgb(58, 58, 58);
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19); 
+}
+
+nav:after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo {
+  float: left;
+  color: rgb(255, 255, 255);
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 70px;
+  padding-left: 60px;
+}
+
+nav .logo a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+nav ul {
+  float: right;
+  list-style: none;
+  margin-right: 60px;
+  position: relative;
+}
+
+nav ul li {
+  float: left;
+  display: inline-block;
+  margin: 0 5px;
+}
+
+nav ul li a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  line-height: 70px;
+  font-size: 17.5px;
+  padding: 8px 15px;
+}
+
+nav ul li a:hover {
+  color: #ff225e;
+}
+
+nav ul ul li a:hover {
+  color: #ff225e;
+  box-shadow: none;
+}
+
+nav ul ul {
+  position: absolute;
+  top: 70px;
+  border-top: 3px solid #ff225e;
+  opacity: 0;
+  visibility: hidden;
+  transition: .3s;
+  background: rgb(58, 58, 58);
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  left: 50px;
+  text-align: left;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+nav ul li:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+nav ul ul li {
+  position: relative;
+  margin: 0px;
+  width: 230px;
+  float: none;
+  display: list-item;
+  border-bottom: 1px solid rgba(0, 0, 0, 0, .3);
+}
+
+nav ul ul li a {
+  line-height: 50px;
+}
+
+ .show, .icon ,input {
+  display: none;
+}
+
+@media all and (max-width: 968px) {
+  nav ul {
+    margin-right: 0px;
+    float: left;
+  }
+
+  nav .logo {
+    padding-left: 30px;
+    width: 100%;
+    font-size: 23;
+  }
+
+  nav ul li, nav ul ul li {
+    display: block;
+    width: 100%;
+  }
+
+  nav ul ul {
+    top: 70px;
+    position: static;
+    border-top: none;
+    float: left;
+    display: none;
+    opacity: 1;
+    visibility: visible;
+    text-align: left;
+    box-shadow: none;
+  }
+
+  nav ul ul a {
+    padding-left: 40px;
+  }
+
+  .show {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    padding: 0 15px;
+    line-height: 50px;
+    cursor: pointer;
+  }
+
+  .show:hover {
+    color: #ff225e;
+  }
+
+  .icon {
+    display: block;
+    color: rgb(255, 255, 255);
+    position: absolute;
+    right: 40px;
+    line-height: 70px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  nav ul li a:hover {
+    box-shadow: none;
+  }
+
+  .show + a, ul {
+    display: none;
+  }
+
+  [id^=btn]:checked + ul {
+    display: block;
+  }
+}

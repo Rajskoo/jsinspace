@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript in Space</title>
+
+    <!-- STYLES -->
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-navbar.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-header.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-article.css">
+    <link type="text/css" rel="stylesheet" href="Styles/responsive-footer.css">
+    <link type="text/css" rel="stylesheet" href="Styles/main.css">
+    <link rel="shortcut icon" href="Img/meteor2.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+    <!-- SCRIPTS -->
+    <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+</head>
+<body>
+
+  <div class="loader">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+ <!-- NAVBAR -->
+ <nav>
+
+    <div class="logo"><a href="index.html" style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></a></div>
+
+    <label for="btn" class="icon">
+      <span class="open-close"><i class="fas fa-th" style="color: rgb(255, 255, 255);"></i></span>
+    </label>
+    <input type="checkbox" id="btn">
+    <ul>
+        <li><a href="index.html">Domov</a></li>
+        <li>
+            <label for="btn-1" class="show">Dokumenty <span class="up-down"><i class="fas fa-caret-down" style="color: rgb(255, 255, 255);"></i></span></label>
+            <a href="#">Dokumenty</a>
+            <input type="checkbox" id="btn-1">
+            <ul>
+                <li><a href="uvodDoJS.html">Úvod do JavaScriptu</a></li>
+                <li><a href="premenneHodnoty.html">Premenné</a></li>
+                <li><a href="matMetody.html"><span style="color: #ff225e;">• </span>Matematické metódy</a></li>
+                <li><a href="retazce.html">Reťazce</a></li>
+                <li><a href="ifElse.html">Riadiace príkazy - if/else</a></li>
+                <li><a href="cykly.html">Riadiace príkazy - cykly</a></li>
+                <li><a href="arrays.html">Polia</a></li>
+                <li><a href="funkcie.html">Vlastné funkcie</a></li>
+            </ul>
+        </li>
+        <li><a href="index.html#documents">Moje Dokumenty</a></li>
+        <li><a href="zdrojoveKody.html">Zdrojové kódy</a></li>
+    </ul>
+ <!-- END OF NAVBAR -->
+ </nav>
+
+ <div class="wrapper">
+  <div class="text-content">
+    <h1>JavaScript in Space</h1>
+  </div>
+</div>
+
+<div class="wave">
+  <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+      <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+  </svg>
+</div>
+
+<!-- HEADER - TEÓRIA -->
+ <header>
+ <div class="container-matmetody">
+  <span class="main-text"><h2>MATEMATICKÉ METÓDY</h2></span>
+    <div class="text">
+      <h2 class="nadpis">Čo sa v tejto kapitole naučíme?</h2>
+        <p class="list">→ používať matematické metódy,</p>
+        <p class="list">→ vytvárať zložitejšie aritmetické postupy,</p>
+        <br />
+      
+      <h2 class="nadpis">Matematické metódy</h2>
+      <p class="textp">
+
+        Pre rôzne výpočty poskytuje jazyk JavaScript množstvo matematických metód. Tie sú súčasťou triedy <strong style="color: #1e92ff;">Math</strong>,
+        ktorá patrí medzi základné triedy jazyka JavaScript. <br />
+
+        Matematické metódy sa používajú v aritmetických výrazoch, na pravej strane priraďovacieho príkazu. <br />
+
+        Každá metóda má svoje meno a do zátvorky sa uvádza jeden alebo viac argumentov, ktoré má metóda spracovať. Po spracovaní argumentov,
+        vráti číselnú hodnotu. <br />
+
+        Ak chceme použiť ktorúkoľvek matematickú metódu, uvedieme pred jej meno Math s bodkou.
+
+      </p>
+
+        <br />
+        <br />
+
+        <p class="textp"><strong style="color: #1e92ff;">Príklad:</strong></p>
+        <div class="code-border">
+          <p class="code-text">
+            <div class="text-border1" style="color: white;">
+              var vysledok = Math.sqrt(32)</span>; <br />
+              &emsp; <span class="comment">//sqrt je odmocnina; prijíma hodnotu 32,</span><br />
+              &emsp; <span class="comment">//vráti hodnotu 5.65..., ktorá sa priradí do "vysledok"</span>
+            </div>
+          </p>
+        </div>
+
+        <br />
+        <br />
+
+        <p class="textp"><strong style="color: #1e92ff;">Niektoré matematické metódy a ich význam:</strong></p>
+        <div class="code-border">
+          <p class="code-text">
+            <div class="text-border1" style="color: white;">
+              abs(x) &emsp; → &emsp; <span class="comment">//absolútna hodnota</span> <br />
+              sin(x) &emsp; → &emsp; <span class="comment">//sínus (argumenty sú v radiánoch!)</span> <br />
+              cos(x) &emsp; → &emsp; <span class="comment">//cosínus (argumenty sú v radiánoch!)</span> <br />
+              tan(x) &emsp; → &emsp; <span class="comment">//tangens (argumenty sú v radiánoch!)</span> <br />
+              exp(x) &emsp; → &emsp; <span class="comment">//e<sup>x</sup></span> <br />
+              log(x) &emsp; → &emsp; <span class="comment">//lnx</span> <br />
+              floor(x) &emsp; → &emsp; <span class="comment">//zaokrúhlenie nadol</span> <br />
+              pow(x, y) &emsp; → &emsp; <span class="comment">//druhá odmocnina</span> <br />
+              sqrt(x) &emsp; → &emsp; <span class="comment">//e<sup>x</sup></span> <br />
+              max(x, y) &emsp; → &emsp; <span class="comment">//vráti väčšiu hodnotu</span> <br />
+              min(x, y) &emsp; → &emsp; <span class="comment">//vráti menšiu hodnotu</span> <br />
+              random() &emsp; → &emsp; <span class="comment">//vráti náhodné číslo z intervalu <0.0, 0.1> </span> <br />
+              round(x) &emsp; → &emsp; <span class="comment">//zaokrúhli číslo x</span> <br />
+            </div>
+          </p>
+        </div>
+
+        <br />
+        <br />
+
+        
+        <p class="textp"><strong><span class="statement">Trieda Math okrem metód ponúka aj konštanty, napríklad:</span></strong></p>
+        <div class="code-border">
+          <p class="code-text">
+            <div class="text-border1" style="color: white;">
+              Math.E &emsp; → &emsp; <span class="comment">//Eulerovo číslo 2,71...</span> <br />
+              Math.PI &emsp; → &emsp; <span class="comment">//Ludolfovo číslo 3,14...</span> <br />
+            </div>
+          </p>
+        </div>
+
+      </p>
+      
+      
+        </div>
+        <br />
+    </div>
+ </div>
+<!-- END OF HEADER -->
+ </header>
+
+  <!-- ARTICLE - ÚLOHY  -->
+   <article>
+   <div class="container">
+    <div class="main-text"><h2>ÚLOHY NA PRECVIČOVANIE</h2></div>
+      <div class="text">
+        
+        <div class="section">
+
+          <!-- ÚLOHA č. 1 -->
+          <details>
+            <summary>Úloha č. 1 </summary>
+            <div class="faq__content">
+              <p>Vytvoríme projekt <strong style="color: #1e92ff;">polomer-kruhu</strong> a v ňom index.html. Vložte script, v ktorom zadáme obsah kruhu. Script potom vypočíta a vypíše polomer kruhu.</p><br />
+              <a style="color: #1e92ff; cursor: pointer; text-decoration: none;" href="zdrojoveKody.html#ph-u1"> Zobraziť zdrojový kód</a>
+              <br />
+            </div>
+            <br />
+          </details>
+
+          <!-- ÚLOHA č. 2 -->
+          <details>
+            <summary>Úloha č. 2 </summary>
+            <div class="faq__content">
+              <p>Vytvorte projekt <strong style="color: #1e92ff;">zaokruhlenie-cisel</strong> a v ňom index.html. Vložte script, v ktorom zadáme ľubovoľné desatinné číslo, ktoré bude následne vypísané na určitý počet desatinných miest.</p><br />
+              <a style="color: #1e92ff; cursor: pointer; text-decoration: none;" href="zdrojoveKody.html#ph-u2"> Zobraziť zdrojový kód</a>
+              <br />
+            </div>
+          </details>
+
+        </div>
+
+    </div>
+   </div>
+  <!-- END OF ARTICLE -->
+  </article>
+
+  <div class="scrollTop" onclick="scrollToTop()"><i class="fas fa-chevron-up"></i></div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="main-text"><h2 style="color: rgb(255, 255, 255);">JavaScript in <i class="fas fa-meteor" style="color: rgb(236, 118, 8);"></i></h2></div>
+      <div class="text"><p>&copy; 2022 <span class="author"><a href="https://www.facebook.com/tomas.reismuller">Tomáš Reisműller</a></span></p></div>
+    </div>
+  <!-- END OF FOOTER-->
+  </footer>
+
+  <script type="text/javascript">
+    setTimeout(function() {
+      $('.loader').fadeToggle();
+    }, 1000);
+
+     $('.icon').click(function(){
+       $('span.open-close i').toggleClass("fa-times");
+     });
+
+     $('.show').click(function(){
+       $('span.up-down i').toggleClass("fa-caret-up");
+     });
+
+     window.addEventListener('scroll', function() {
+        var scroll = document.querySelector('.scrollTop');
+        scroll.classList.toggle("active", window.scrollY > 500);
+     });
+
+     function scrollToTop() {
+       window.scrollTo(0, 0);
+     }
+  </script>
+
+</body>
+</html>
